@@ -28,6 +28,7 @@
     <div class="editMainInfo">
 <form action="{{route('editMainInfo')}}" method = 'post'>
     {{ csrf_field() }}
+{{--    coment1--}}
     <label for="name">Ім'я</label><br>
     <input type="text" id="name" name ='editName' value="{{$data['name']}}"><br>
 
