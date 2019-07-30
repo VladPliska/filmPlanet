@@ -111,7 +111,7 @@ class PostController extends Controller
         if (empty($data))
         {
             echo 'account is not exits1';
-            $autorized = false;
+            $_SESSION['autorized'] = false;
         }
         else
         {      $_SESSION['email_user'] = $_POST['email_login'];
@@ -325,6 +325,15 @@ class PostController extends Controller
             $user = $_SESSION['email'];
             $listFavFilm = likeFilm::select('film_name')->where('email','=',$user)->get();       //
             return view('user.favouriteFilm',compact('user','listFavFilm'));
+
+        }
+
+        public  function exit()
+        {
+            session_start();
+
+            $_SESSION['autorized'] =false;
+            return view('login.login');
 
         }
 }

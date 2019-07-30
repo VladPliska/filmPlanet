@@ -15,6 +15,26 @@ img
     height: 200px;
     /*border:1px solid black;*/
 }
+
+.user
+{
+    color: #adb5bd;
+    padding-right: 10px;
+    font-size: 24px;
+    float: right;
+    margin-right: 5%;
+}
+
+.btnExit
+{
+    font-size: 24px;
+    color:#ccc;
+    float:right;
+}
+.btnExit:hover
+{
+    color:#818182;
+}
 .decoration
 {
     display:inline-block;

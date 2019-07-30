@@ -10,8 +10,13 @@
 </head>
 <body>
     <div class="logining">
+        @if($_SESSION['autorized'] == true)
+            <a class="btnExit" href="{{route('exit')}}">Вихід</a>
+            <div class="user">{{$_SESSION['email']}}</div>
+        @else
         <a href="{{route('register')}}" class="reg">Registration</a>
         <a href="{{route('signin')}}" class="signin">SignIn</a>
+            @endif
     </div>
     <div class="logo">FilmPlanet</div>
 
