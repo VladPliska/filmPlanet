@@ -1,0 +1,75 @@
+body,html
+{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: url('../img/фон.jpg') no-repeat center top / cover;
+}
+
+.logo{
+    padding-top: 2%;
+    text-align: center;
+    font-size: 35px;
+    color: #ccc;
+}
+
+.form-register
+{
+
+    width: 20%;
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 40%;
+    background: rgba(197,31,26,0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-register input
+{
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    height: 40px;
+    background: #fff none;
+    line-height: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.btn_reg{
+    display: block;
+    margin: 0 auto;
+    margin-top: 8%;
+    width: 70%;
+    background:#f6993f;
+    color: #000;
+    border-radius: 4px;
+    box-shadow: #c51f1a;
+    border:none;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.form_title
+{
+    text-align: left;
+    color:#ccc;
+    font-size: 30px;
+    margin-bottom: 8%;
+}
+
+.sign_in a
+{
+    color: #f6993f;
+    text-decoration: none;
+}
+.sign_in
+{
+    text-align: center;
+    color:#ccc;
+    margin-top: 5%;
+}
