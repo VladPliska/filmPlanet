@@ -281,7 +281,7 @@ class PostController extends Controller
           return view('login.login');
         }else
             {
-                echo "<script>alert('Фільм додано до улюбених');</script>";
+
                 $user = $_SESSION['email'];
 
                $lifeFilm = likeFilm::select('id')->where('email','=',$user)->where('film_name','=',$nameFilm)->first();
@@ -291,6 +291,7 @@ class PostController extends Controller
                 'email' => $user,
                 'film_name' => $nameFilm
                 ));
+                    echo "<script>alert('Фільм додано до улюбених');</script>";
                 $listFavFilm = likeFilm::select('film_name')->where('email','=',$user)->get();       // назви всіх
                 return view('user.favouriteFilm',compact('user','listFavFilm'));
                 }else
@@ -316,4 +317,15 @@ class PostController extends Controller
 
             return view('filmByCategor',compact('filmInfo','user','category'));
         }
+
+        public function showFavourite()
+        {
+            session_start();
+
+            $user = $_SESSION['email'];
+            $listFavFilm = likeFilm::select('film_name')->where('email','=',$user)->get();       //
+            return view('user.favouriteFilm',compact('user','listFavFilm'));
+
+        }
 }
+

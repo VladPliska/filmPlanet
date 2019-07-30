@@ -10,53 +10,62 @@
     <script type = "text/javascript">
         function chekPass(){
             var pass = document.getElementById("pass");
-            var passreap = document.getElementById("passreap");
-            if(pass.value != passreap.value)
+            var passReap = document.getElementById("passReap");
+            if(pass.value != passReap.value)
             {
                 alert("Введені паролі не співпадають,повторіть спробу");
                 pass.value ="";
-                passreap.value ="";
+                passReap.value ="";
             }
         }
     </script>
 </head>
 <body>
-<div class="header">
-    <div class="logo">FilmPlanet</div>
-    <div class="user-info">{{$data['email']}}</div>
-</div>
+    <div class="header">
+        <div class="logo">FilmPlanet</div>
+        <div class="user-info">{{$data['email']}}</div>
+    </div>
+    <nav>
+        <a href="{{route('index')}}">Всі фільми</a><br><br>
+        <a href="{{route('showFavourite')}}">Улюблені фільми</a>
+    </nav>
+
     <div class="editMainInfo">
-<form action="{{route('editMainInfo')}}" method = 'post'>
-    {{ csrf_field() }}
-{{--    coment1--}}
-    <label for="name">Ім'я</label><br>
-    <input type="text" id="name" name ='editName' value="{{$data['name']}}"><br>
+        <form action="{{route('editMainInfo')}}" method = 'post'>
+            {{ csrf_field() }}
 
-    <label for="email">Email</label><br>
-    <input type="text" id='email' name="editEmail" value="{{$data['email']}}"><br>
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name ='editName' value="{{$data['name']}}"><br>
 
-    <label for="birthday">Дата народження</label><br>
-    <input type="text" id="birthday" name="editBirthday" value="{{$data['birthday']}}"><br>
+            <label for="email">Email</label>
+            <input type="text" id='email' name="editEmail" value="{{$data['email']}}"><br>
 
-    <label for="phone">Номер телефону</label><br>
-    <input type="text" id="phone" name="editNumber" value="{{$data['phone_number']}}"><br>
+            <label for="birthday">Дата народження</label>
+            <input type="text" id="birthday" name="editBirthday" value="{{$data['birthday']}}"><br>
 
-    <button type="submit">Змінити</button>
-</form>
+            <label for="phone">Номер телефону</label>
+            <input type="text" id="phone" name="editNumber" value="{{$data['phone_number']}}"><br>
+
+            <button type="submit">Змінити</button>
+        </form>
     </div>
     <div class="editPass">
-<form action="{{route('editMainPass')}}" name="editpass" method="post">
-    {{ csrf_field() }}
-    Введіть старий пароль<input type="password" name="oldPass" required><br>
+        <form action="{{route('editMainPass')}}" name="editpass" method="post">
+            {{ csrf_field() }}
+             <label for="oldPass">Введіть старий пароль</label>
+             <input type="password"id ='oldPass' name="oldPass" required>
 
-    Введіть новий пароль <input type="password" name="newPass" id="pass" required><br>
-    Повторіть новий пароль <input type="password" name="newPassRepeat" id="passreap" required><br>
-    <button type="submit" onclick="chekPass()">Змінити пароль</button>
-</form>
+             <label for="pass">Введіть новий пароль</label>
+             <input type="password" name="newPass" id="pass" required>
+
+             <label for="passReap">Повторіть новий пароль</label>
+             <input type="password" name="newPassRepeat" id="passReap" required><br>
+
+             <button type="submit" onclick="chekPass()">Змінити пароль</button>
+        </form>
     </div>
 
 
-<a href="{{route('index')}}">На головну</a>
 
 </body>
 </html>

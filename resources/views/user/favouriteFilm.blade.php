@@ -19,7 +19,7 @@
 
     <div class="content">
         <div class="content-title">Список ваших улюблених фільмів</div>
-            <div class="allFilm"><a href="{{route('index')}}">AllFilm</a></div>
+            <div class="allFilm"><a href="{{route('index')}}">Всі фільми</a></div>
         <br><br>
         <div class="katalog">
             @foreach($listFavFilm as $key=> $value)

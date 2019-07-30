@@ -33,4 +33,6 @@ Route::get('film/{nameFilm}','PostController@filmPage')->name('film');
 
 Route::get('setLike/{nameFilm}/','PostController@addfavourite')->name('addFavourite');
 
+Route::get('showLikeFilm','PostController@showFavourite')->name('showFavourite');
+
 Route::get('selectCategor/{nameCategor}/','PostController@selectCategor')->name('selectCategor');
