@@ -55,8 +55,8 @@ class PostController extends Controller
         try {
 
             $data = [
-                'name' => 'vlad',
-                'birthday' => 'vlad',
+                'name' => null,
+                'birthday' => null,
                 'email' => $_POST['email'],
                 'password' => $_POST['pass'],
                 'phone_number' => $_POST['phone']

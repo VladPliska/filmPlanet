@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="logo">FilmPlanet</div>
+<div class="logo"><a href="{{route('index')}}">FilmPlanet</a></div>
         <div class="form-autoriz">
             <div class ='autoriz_title'>Авторизація <br>
                 <div class="enterEmail">Для входу введіть Ваш Email</div>

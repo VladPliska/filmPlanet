@@ -14,7 +14,7 @@
 
 <div class="header">
     <div class="logo">FilmPlanet</div>
-    <div class="user-info"><a href="{{route('editInfoPage')}}">{{$user}}</a></div>
+    <span class="user-info"><a href="{{route('editInfoPage')}}">{{$user}}</a></span>
 </div>
 
     <div class="content">
@@ -38,9 +38,5 @@
     </div>
         <div class="footer"></div>
 
-{{--<h1>Hello,{{$_POST['email_login']}}</h1>--}}
-{{--    <h2>{{$_SESSION['autorized']}}</h2>--}}
-{{--<a href="{{route('editInfoPage')}}">ProfileSetting</a>--}}
-{{--<a href="{{route('index')}}">AllFilm</a>--}}
 </body>
 </html>
