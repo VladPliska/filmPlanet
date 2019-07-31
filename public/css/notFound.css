@@ -1,0 +1,44 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: url('../img/фон.jpg') no-repeat center top / cover;
+    min-height: 100vh;
+}
+
+a
+{
+    text-decoration: none;
+    color:#000;
+}
+
+.logo
+{
+    padding-top:3%;
+    font-size: 36px;
+    text-align:center;
+}
+.logo a{
+    color:#ccc;
+}
+
+.textErr{
+    width: 50%;
+    margin: 0 auto;
+    color: #cccccc;
+    margin-top: 10%;
+}
+
+.tryAgain
+{
+    display: inline-block;
+    margin-top: 4%;
+    background:#f6993f;
+    color: #000;
+    border-radius: 4px;
+    box-shadow: #c51f1a;
+    border:none;
+    padding: 5px;
+    font-size: 18px;
+    margin-left: 43%;
+}

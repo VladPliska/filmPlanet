@@ -110,8 +110,9 @@ class PostController extends Controller
 
         if (empty($data))
         {
-            echo 'account is not exits1';
+
             $_SESSION['autorized'] = false;
+            return view('user.userNot');
         }
         else
         {      $_SESSION['email_user'] = $_POST['email_login'];
