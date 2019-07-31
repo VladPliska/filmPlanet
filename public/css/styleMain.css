@@ -8,6 +8,7 @@ body,html
 
 a{
     text-decoration:none;
+    color: #adb5bd;
 }
 img
 {
@@ -23,6 +24,17 @@ img
     font-size: 24px;
     float: right;
     margin-right: 5%;
+}
+
+.favFilm
+{
+    text-decoration: none;
+    color: #adb5bd;
+    font-size: 24px;
+    /*border: 1px solid black;*/
+    float: right;
+    margin-top: 10%;
+
 }
 
 .btnExit
