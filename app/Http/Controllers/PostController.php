@@ -64,6 +64,8 @@ class PostController extends Controller
 
             $_SESSION['email'] = $_POST['email'];
 
+
+
             DB::table('users')->insert($data);
 
 
@@ -75,9 +77,19 @@ class PostController extends Controller
             return view('login.verMail');
         } //
         catch (\PDOException $e) {
-            echo 'Користувач з указаною почтовою скринькою вже існує';
+            if($e->getCode() ==23000)
+            {
+                echo "<script>alert('Профіль з вказаним email вже існує\\nВкажіть інший email та повторіть спробу');</script>";
+                echo "<script>javascript:history.back();</script>";
+
+            }else{
+                echo "<script>alert('Невдалося надіслати повідомлення на вказану почтову скриньку\\nПеревірьте введену електрону адресу та спробуйте ще раз');</script>";
+                echo "<script>javascript:history.back();</script>";
+            }
+
         } catch (\Exception $e) {
-            return view('login.sendErr');
+            echo "<script>alert('Невдалося надіслати повідомлення на вказану почтову скриньку\\nПеревірьте введену електрону адресу та спробуйте ще раз');</script>";
+            echo "<script>javascript:history.back();</script>";
         }
 
     }

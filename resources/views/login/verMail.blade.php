@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    <div class="logo"><h1>FilmPlanet</h1></div>
 <form action="{{route('checkVar')}}" method="post">
     {{ csrf_field() }}
     <h1>Введіть код</h1>

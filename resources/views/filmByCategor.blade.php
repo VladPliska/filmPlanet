@@ -29,7 +29,8 @@
     <div class="katalog">
         @foreach($filmInfo as $key=> $value)
             <div class="favFilmList decoration">
-                <a href="{{route('film',['filmName'=>$value->film_name])}}">
+                {{$value->film_name}}
+                <a href="{{route('film',['nameFilm'=>$value->title])}}">
                     <img src="/img/{{$value->title}}.jpg" alt="{{$value->title}}">
                     <div class="title-film">{{$value->title}}</div>
                 </a>
