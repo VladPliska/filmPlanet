@@ -38,3 +38,5 @@ Route::get('showLikeFilm','PostController@showFavourite')->name('showFavourite')
 Route::get('selectCategor/{nameCategor}/','PostController@selectCategor')->name('selectCategor');
 
 Route::any('exit','PostController@exit')->name('exit');
+
+Route::get('delete/{user}/{nameFilm}','PostController@deleteFav') ->name('deleteFav');

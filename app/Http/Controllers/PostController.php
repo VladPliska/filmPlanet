@@ -336,5 +336,13 @@ class PostController extends Controller
             return view('login.login');
 
         }
+
+        public function deleteFav($user,$nameFilm){
+            session_start();
+            likeFilm::where('email','=',$user)->where('film_name','=',$nameFilm)->delete();
+
+            $listFavFilm = likeFilm::select('film_name')->where('email','=',$user)->get();
+            return view('user.favouriteFilm',compact('user','listFavFilm'));
+        }
 }
 
