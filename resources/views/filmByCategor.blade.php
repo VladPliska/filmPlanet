@@ -7,12 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/likeFilm.css">
     <title>Document</title>
-    <style>
-        html,body
-        {
-            height: 100vh;
-        }
-    </style>
+
 </head>
 <body>
 

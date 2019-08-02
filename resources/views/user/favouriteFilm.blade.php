@@ -14,7 +14,7 @@
 
 <div class="header">
     <div class="logo"><a href="{{route('index')}}">FilmPlanet</a></div>
-    <span class="user-info"><a href="{{route('editInfoPage')}}">{{$user}}</a></span>
+    <span class="user-info"><a href="{{route('editInfoPage')}}">{{$_SESSION['email']->email}}</a></span>
 </div>
 
     <div class="content">

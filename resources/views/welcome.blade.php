@@ -11,9 +11,9 @@
 <body>
     <div class="logining">
         @if($_SESSION['autorized'] == true)
-            <a class="btnExit" href="{{route('exit')}}">Вихід</a>
-            <div class="user"><a href="{{route('editInfoPage')}}">{{$_SESSION['email']}}</a></div>
+            <div class="user"><a href="{{route('editInfoPage')}}">{{$_SESSION['email']->email}}</a></div>
             <a  class = 'favFilm' href="{{route('showFavourite')}}">Улюблені фільми</a>
+            <a class="btnExit" href="{{route('exit')}}">Вихід</a>
         @else
         <a href="{{route('register')}}" class="reg">Registration</a>
         <a href="{{route('signin')}}" class="signin">SignIn</a>

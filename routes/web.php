@@ -14,29 +14,26 @@
 
 Route::get('/','PostController@index')->name('index');
 
-Route::get('register','PostController@showReg')->name('register');
-Route::get('login','PostController@showSignIn')->name('signin');
+Route::get('register','UserController@showReg')->name('register');
+Route::get('login','UserController@showSignIn')->name('signin');
+Route::post('createUser','UserController@create')->name('login');
+Route::post('checkVar','UserController@verification')->name('checkVar');
 
-Route::post('verificationMail','PostController@insertData')->name('login');
+Route::post('checkLog','UserController@auth')->name('checkLog');
 
-Route::post('checkVar','PostController@checkVar')->name('checkVar');
-Route::post('checkLog','PostController@logining')->name('checkLog');
+Route::get('editInfoPage','EditPageController@index')->name('editInfoPage');
 
-Route::get('editInfoPage','PostController@editPage')->name('editInfoPage');
+Route::post('editMainInfo','EditPageController@editMainInfo')->name('editMainInfo');
+Route::post('editPass','EditPageController@editPass')->name('editMainPass');
 
-Route::post('editMainInfo','PostController@editMainInfo')->name('editMainInfo');
-Route::post('editPass','PostController@editPass')->name('editMainPass');
+Route::get('film/{nameFilm}','FilmController@index')->name('film');
 
-Route::get('main','PostController@mainPage')->name('mainPage');
+Route::get('setLike/{nameFilm}/','FilmController@addfavourite')->name('addFavourite');
 
-Route::get('film/{nameFilm}','PostController@filmPage')->name('film');
+Route::get('showLikeFilm','FilmController@showFavourite')->name('showFavourite');
 
-Route::get('setLike/{nameFilm}/','PostController@addfavourite')->name('addFavourite');
+Route::get('selectCategor/{nameCategor}/','FilmController@selectCategor')->name('selectCategor');
 
-Route::get('showLikeFilm','PostController@showFavourite')->name('showFavourite');
+Route::any('exit','UserController@exit')->name('exit');
 
-Route::get('selectCategor/{nameCategor}/','PostController@selectCategor')->name('selectCategor');
-
-Route::any('exit','PostController@exit')->name('exit');
-
-Route::get('delete/{user}/{nameFilm}','PostController@deleteFav') ->name('deleteFav');
+Route::get('delete/{user}/{nameFilm}','FilmController@deleteFav')->name('deleteFav');

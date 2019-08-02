@@ -8,5 +8,5 @@ class Films extends Model
 {
  protected $table ='films';
 
- protected $fillable =['title','subtitle','content'];
+ protected $fillable =['title','subtitle','content','url','img','category'];
 }

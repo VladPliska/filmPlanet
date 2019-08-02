@@ -20,10 +20,10 @@ img
 .user
 {
     color: #adb5bd;
-    padding-right: 10px;
     font-size: 24px;
     float: right;
-    margin-right: 5%;
+
+    /*border:1px solid black;*/
 }
 
 .favFilm
@@ -39,6 +39,9 @@ img
 
 .btnExit
 {
+    margin-top: 10%;
+
+    display: inline-block;
     font-size: 24px;
     color:#ccc;
     float:right;

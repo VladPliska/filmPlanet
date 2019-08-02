@@ -1,0 +1,77 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    background: url('../img/фон.jpg') no-repeat center top / cover;
+}
+
+body{
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color:#ccc;
+}
+
+.logo
+{
+    color:#ccc;
+    font-size: 34px;
+    text-align: center;
+    padding-top: 2%;
+}
+
+form
+{
+    margin-left: 40%;
+    margin-top: 1%;
+    display: inline-block;
+    background: rgba(197,31,26,0.5);
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+.enterCode{
+    font-size: 28px;
+    color:#ccc;
+    margin-bottom: 9%;
+}
+input
+{
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    height: 40px;
+    background: #fff none;
+    line-height: 20px;
+    font-size: 16px;
+    color: #333;
+}
+.btnSubmit{
+    display: block;
+    margin: 0 auto;
+    margin-top: 8%;
+    width: 70%;
+    background:#f6993f;
+    color: #000;
+    border-radius: 4px;
+    box-shadow: #c51f1a;
+    border:none;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.title
+{
+    color:#ccc;
+    font-size:28px;
+    text-align: center;
+    margin-top:6% ;
+}
