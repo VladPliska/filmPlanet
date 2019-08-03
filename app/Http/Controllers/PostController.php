@@ -25,16 +25,26 @@ class PostController extends Controller
         {
             $_SESSION['autorized'] = false;
             $dara = Films::all();
-
+            $user  = null;
             $category = Category::all();
 
-            return view('welcome', compact('dara', 'category'));
+            if($_SESSION['autorized'] == false){
+                $user = null;
+            }
+
+            return view('welcome', compact('dara', 'category','user'));
         }else{
             $dara = Films::all();
 
             $category = Category::all();
 
-            return view('welcome', compact('dara', 'category'));
+            if($_SESSION['autorized'] == false){
+                $user = null;
+            }else {
+                $query = User::select('email')->where('id', '=', $_SESSION['userId'])->first();
+                $user = $query->email;
+            }
+            return view('welcome', compact('dara', 'category','user'));
         }
     }
 

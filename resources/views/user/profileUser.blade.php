@@ -23,7 +23,7 @@
 <body>
     <div class="header">
         <div class="logo">FilmPlanet</div>
-        <div class="user-info">{{$data['email']}}</div>
+        <div class="user-info">{{$user}}</div>
     </div>
     <nav>
         <a href="{{route('index')}}">Всі фільми</a><br><br>
@@ -38,12 +38,12 @@
             <input type="text" id="name" name ='editName' value="{{$data['name']}}"><br>
 
             <label for="email">Email</label>
-            <input type="text" id='email' name="editEmail" value="{{$data['email']}}"><br>
+            <input type="text" id='email' name="editEmail" value="{{$data['email']}}" required><br>
 
-            <label for="birthday">Дата народження</label>
+            <label for="birthday">Дата народження <span class ="format">(1969-12-31)</span></label>
             <input type="text" id="birthday" name="editBirthday" value="{{$data['birthday']}}"><br>
 
-            <label for="phone">Номер телефону</label>
+            <label for="phone">Номер телефону <span class ="format">(380-0000-00000)</span></label>
             <input type="text" id="phone" name="editNumber" value="{{$data['phone_number']}}"><br>
 
             <button type="submit">Змінити</button>

@@ -37,7 +37,8 @@ body
 }
 
 .editMainInfo label,.editPass label{
-    padding-left: 5%;
+    padding-left: 0;
+    text-align: center;
     margin-bottom: 2%;
     display:block;
     font-size: 20px;
@@ -102,6 +103,11 @@ nav a{
     text-align: center;
     border-radius: 3px;
     background:#f6993f;
+}
+
+.format
+{
+    font-size:14px;
 }
 
 
