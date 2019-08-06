@@ -19,7 +19,7 @@
                     <input type="text" name = 'email_login' required class = 'login_label' placeholder="Email"
                     ><br>
                     <input type="password" name="pass_login" required class = 'pass_label' placeholder ="Пароль">
-                    <label class="saveMe"><input type="checkbox" >Запам'ятати мене</label>
+
                     <button class="btn" type="submit">Увійти</button>
                     <div class="newAcc" ><a href="{{route('register')}}">Реєстрація </a>нового користувача</div>
                 </form>
